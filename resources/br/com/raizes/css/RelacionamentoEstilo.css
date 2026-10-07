@@ -1,0 +1,331 @@
+/* ==========================================================================
+   RAÍZES E MEMÓRIAS — GERENCIAMENTO DE RELACIONAMENTOS (3 COLUNAS)
+   ========================================================================== */
+
+.root-relacionamento {
+    -fx-background-color: #f8fafc;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.card-container {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(15, 23, 42, 0.04), 12, 0, 0, 3);
+}
+
+.scroll-pane-transparente {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.scroll-pane-transparente .viewport {
+    -fx-background-color: transparent;
+}
+
+/* TÍTULOS E BADGES */
+
+.secao-titulo {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0f172a;
+}
+
+.secao-subtitulo {
+    -fx-font-size: 11px;
+    -fx-text-fill: #64748b;
+}
+
+.badge-contador {
+    -fx-background-color: #eff6ff;
+    -fx-text-fill: #2563eb;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-padding: 3px 8px;
+    -fx-background-radius: 10px;
+}
+
+.label-id {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #64748b;
+}
+
+.badge-status {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #64748b;
+}
+
+/* PESQUISA */
+
+.campo-pesquisa {
+    -fx-background-color: #f8fafc;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 1px;
+    -fx-padding: 7px 10px;
+    -fx-font-size: 12px;
+    -fx-text-fill: #334155;
+}
+
+.campo-pesquisa:focused {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #2563eb;
+}
+
+/* ITENS DA LISTA ESQUERDA */
+
+.card-familia-item {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #f1f5f9;
+    -fx-border-width: 1px;
+    -fx-padding: 10px 12px;
+    -fx-cursor: hand;
+}
+
+.card-familia-item:hover {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #cbd5e1;
+}
+
+.card-familia-item.selecionado {
+    -fx-background-color: #eff6ff;
+    -fx-border-color: #bfdbfe;
+    -fx-border-width: 1.5px;
+}
+
+.item-familia-titulo {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e293b;
+}
+
+.item-familia-sub {
+    -fx-font-size: 11px;
+    -fx-text-fill: #64748b;
+}
+
+/* RÓTULOS E CAMPOS DO FORMULÁRIO */
+
+.rotulo-campo {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #475569;
+}
+
+.combo-box {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 1px;
+    -fx-padding: 2px;
+}
+
+.combo-box:focused {
+    -fx-border-color: #2563eb;
+}
+
+.menu-filhos {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 6px;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 1px;
+    -fx-padding: 7px 10px;
+    -fx-text-fill: #334155;
+    -fx-font-size: 12px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.menu-filhos:hover {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #94a3b8;
+}
+
+.container-filhos-lista {
+    -fx-padding: 4px 0;
+}
+
+.filho-tag-item {
+    -fx-background-color: #f1f5f9;
+    -fx-background-radius: 6px;
+    -fx-padding: 6px 10px;
+}
+
+.filho-tag-nome {
+    -fx-font-size: 12px;
+    -fx-text-fill: #334155;
+    -fx-font-weight: bold;
+}
+
+.button-remover-tag {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ef4444;
+    -fx-cursor: hand;
+    -fx-font-size: 12px;
+    -fx-padding: 0 4px;
+}
+
+.button-remover-tag:hover {
+    -fx-text-fill: #dc2626;
+}
+
+.button-remover-item {
+    -fx-background-color: #f1f5f9;
+    -fx-background-radius: 6px;
+    -fx-text-fill: #64748b;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-padding: 6px 10px;
+}
+
+.button-remover-item:hover {
+    -fx-background-color: #fee2e2;
+    -fx-text-fill: #dc2626;
+}
+
+/* BOTÕES GERAIS */
+
+.button-novo {
+    -fx-background-color: #eff6ff;
+    -fx-text-fill: #2563eb;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-padding: 9px;
+    -fx-cursor: hand;
+}
+
+.button-novo:hover {
+    -fx-background-color: #dbeafe;
+}
+
+.button-acao {
+    -fx-background-color: #f1f5f9;
+    -fx-text-fill: #334155;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px 14px;
+    -fx-cursor: hand;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+}
+
+.button-acao:hover {
+    -fx-background-color: #e2e8f0;
+}
+
+.button-perigo {
+    -fx-background-color: #fef2f2;
+    -fx-text-fill: #dc2626;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px 14px;
+    -fx-cursor: hand;
+    -fx-border-color: #fecaca;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+}
+
+.button-perigo:hover {
+    -fx-background-color: #fee2e2;
+}
+
+.button-primario {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px 16px;
+    -fx-cursor: hand;
+}
+
+.button-primario:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+/* PAINEL DE PREVIEW (DIREITA) */
+
+.painel-preview-familia {
+    -fx-background-color: #f8fafc;
+    -fx-background-radius: 10px;
+    -fx-padding: 16px;
+    -fx-border-color: #f1f5f9;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+}
+
+.avatar-preview-grande {
+    -fx-pref-width: 64px;
+    -fx-pref-height: 64px;
+    -fx-background-color: #e2e8f0;
+    -fx-background-radius: 32px;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 2px;
+    -fx-border-radius: 32px;
+}
+
+.avatar-preview-pequeno {
+    -fx-pref-width: 42px;
+    -fx-pref-height: 42px;
+    -fx-background-color: #e2e8f0;
+    -fx-background-radius: 26px;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 26px;
+}
+
+.preview-nome {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #475569;
+    -fx-text-alignment: center; /* Centraliza o texto quebrado */
+}
+
+.preview-coracao {
+    -fx-text-fill: #ef4444;
+    -fx-font-size: 16px;
+}
+
+.badge-total-filhos {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 3px 10px;
+    -fx-background-radius: 12px;
+}
+
+.grelha-filhos-preview {
+    -fx-padding: 4px;
+}
+
+.badge-mais-filhos {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #64748b;
+    -fx-background-color: #e2e8f0;
+    -fx-padding: 8px 10px;
+    -fx-background-radius: 20px;
+}
+
+.card-citacao {
+    -fx-background-color: #f0fdf4;
+    -fx-background-radius: 8px;
+    -fx-border-color: #bbf7d0;
+    -fx-border-radius: 8px;
+    -fx-padding: 12px;
+}
+
+.texto-citacao {
+    -fx-font-size: 11px;
+    -fx-text-fill: #166534;
+    -fx-font-style: italic;
+    -fx-text-alignment: CENTER;
+}

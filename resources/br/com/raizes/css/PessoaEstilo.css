@@ -1,0 +1,266 @@
+/* ==========================================================================
+   DESIGN SYSTEM - PESSOAS (Padrão SaaS Moderno)
+   ========================================================================== */
+
+.root-pessoa {
+    -fx-background-color: #f3f4f6;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* Topo / Cabeçalho */
+.topo-header {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e5e7eb;
+    -fx-border-width: 0 0 1 0;
+}
+
+.titulo-modulo {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+.subtitulo-modulo {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6b7280;
+}
+
+.search-bar-topo {
+    -fx-background-color: #f9fafb;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #d1d5db;
+    -fx-border-width: 1px;
+    -fx-padding: 7px 12px;
+    -fx-font-size: 13px;
+}
+
+.search-bar-topo:focused {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #2563eb;
+    -fx-effect: dropshadow(gaussian, rgba(37, 99, 235, 0.15), 4, 0, 0, 0);
+}
+
+/* Cards e Painéis Brancos */
+.card-painel {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-color: #e5e7eb;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.03), 10, 0, 0, 2);
+}
+
+.card-titulo {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2937;
+}
+
+.card-subtitulo {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6b7280;
+}
+
+/* Badges e Contadores */
+.badge-contador {
+    -fx-background-color: #f3f4f6;
+    -fx-text-fill: #4b5563;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+    -fx-padding: 3px 8px;
+    -fx-background-radius: 10px;
+}
+
+.container-status {
+    -fx-background-color: #f9fafb;
+    -fx-padding: 4px 10px;
+    -fx-background-radius: 8px;
+    -fx-border-color: #e5e7eb;
+    -fx-border-radius: 8px;
+}
+
+.badge-id {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4b5563;
+}
+
+.badge-status {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #059669;
+}
+
+/* Rótulos e Campos */
+.rotulo-campo {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #374151;
+}
+
+.text-field, .combo-box, .date-picker {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-border-color: #d1d5db;
+    -fx-border-width: 1px;
+    -fx-padding: 7px 10px;
+    -fx-font-size: 13px;
+}
+
+.text-field:focused, .combo-box:focused, .date-picker:focused {
+    -fx-border-color: #2563eb;
+    -fx-effect: dropshadow(gaussian, rgba(37, 99, 235, 0.15), 4, 0, 0, 0);
+}
+
+/* Área de Foto */
+.box-foto-container {
+    -fx-background-color: #f9fafb;
+    -fx-padding: 10px;
+    -fx-background-radius: 8px;
+    -fx-border-color: #e5e7eb;
+    -fx-border-radius: 8px;
+}
+
+.texto-ajuda {
+    -fx-font-size: 11px;
+    -fx-text-fill: #9ca3af;
+}
+
+.info-rodape-form {
+    -fx-font-size: 11px;
+    -fx-text-fill: #1e40af;
+    -fx-background-color: #eff6ff;
+    -fx-padding: 8px 12px;
+    -fx-background-radius: 6px;
+    -fx-border-color: #dbeafe;
+    -fx-border-radius: 6px;
+}
+
+/* ListView Estilizada */
+.lista-pessoas {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-border-color: #e5e7eb;
+    -fx-border-width: 1px;
+}
+
+.lista-pessoas .list-cell {
+    -fx-padding: 8px 10px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #1f2937;
+    -fx-font-size: 13px;
+}
+
+.lista-pessoas .list-cell:even {
+    -fx-background-color: #fafafa;
+}
+
+.lista-pessoas .list-cell:hover {
+    -fx-background-color: #f0fdf4;
+    -fx-cursor: hand;
+}
+
+.lista-pessoas .list-cell:selected {
+    -fx-background-color: #e0f2fe;
+    -fx-text-fill: #0369a1;
+    -fx-font-weight: bold;
+}
+
+/* Botões do Sistema */
+.button-novo-cadastro {
+    -fx-background-color: #eff6ff;
+    -fx-text-fill: #2563eb;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px 12px;
+    -fx-cursor: hand;
+    -fx-border-color: #bfdbfe;
+    -fx-border-radius: 6px;
+}
+.button-novo-cadastro:hover {
+    -fx-background-color: #dbeafe;
+}
+
+.button-secundario {
+    -fx-background-color: #f3f4f6;
+    -fx-text-fill: #374151;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px 16px;
+    -fx-cursor: hand;
+    -fx-border-color: #d1d5db;
+    -fx-border-radius: 6px;
+}
+.button-secundario:hover {
+    -fx-background-color: #e5e7eb;
+}
+
+.button-remover {
+    -fx-background-color: #fff1f2;
+    -fx-text-fill: #e11d48;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-padding: 6px 12px;
+    -fx-cursor: hand;
+    -fx-border-color: #fecdd3;
+    -fx-border-radius: 6px;
+}
+.button-remover:hover {
+    -fx-background-color: #ffe4e6;
+}
+
+.button-perigo {
+    -fx-background-color: #ef4444;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px 16px;
+    -fx-cursor: hand;
+}
+.button-perigo:hover {
+    -fx-background-color: #dc2626;
+}
+
+.button-primario {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px 20px;
+    -fx-cursor: hand;
+}
+.button-primario:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+.button-acao {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #374151;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-padding: 6px 12px;
+    -fx-cursor: hand;
+    -fx-border-color: #d1d5db;
+    -fx-border-radius: 6px;
+}
+.button-acao:hover {
+    -fx-background-color: #f3f4f6;
+}
+
+/* Estilo opcional para as células da lista de pessoas */
+.list-cell {
+    -fx-padding: 6px 10px;
+    -fx-background-color: transparent;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #e2e8f0; /* Cor de seleção moderna */
+    -fx-text-fill: #0f172a;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #f1f5f9; /* Efeito hover ao passar o rato */
+}

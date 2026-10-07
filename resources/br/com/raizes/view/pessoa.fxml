@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.com.raizes.controller.PessoaController"
+            stylesheets="@../css/PessoaEstilo.css"
+            styleClass="root-pessoa"
+            prefWidth="1050" prefHeight="720">
+
+    <!-- CABEÇALHO DO MÓDULO -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="15" styleClass="topo-header">
+            <padding>
+                <Insets top="20" right="30" bottom="15" left="30"/>
+            </padding>
+            <VBox spacing="3" HBox.hgrow="ALWAYS">
+                <Label text="Pessoas" styleClass="titulo-modulo"/>
+                <Label text="Gerencie os membros da árvore genealógica" styleClass="subtitulo-modulo"/>
+            </VBox>
+            <TextField fx:id="txtPesquisaTopo" promptText="Pesquisar nome, ID ou parte do nome..." styleClass="search-bar-topo" prefWidth="320"/>
+        </HBox>
+    </top>
+
+    <!-- CENTRO: DUAS COLUNAS -->
+    <center>
+        <HBox spacing="20">
+            <BorderPane.margin>
+                <Insets top="5" right="25" bottom="25" left="25"/>
+            </BorderPane.margin>
+
+            <!-- COLUNA ESQUERDA: LISTA DE PESSOAS CADASTRADAS -->
+            <VBox spacing="12" prefWidth="350" styleClass="card-painel">
+                <padding>
+                    <Insets top="16" right="16" bottom="16" left="16"/>
+                </padding>
+
+                <HBox alignment="CENTER_LEFT">
+                    <Label text="Pessoas Cadastradas" styleClass="card-titulo" HBox.hgrow="ALWAYS"/>
+                    <Label fx:id="lblTotalPessoas" text="0" styleClass="badge-contador"/>
+                </HBox>
+
+                <TextField fx:id="txtBuscarLista" promptText="Buscar pessoa..." styleClass="text-field"/>
+
+                <ListView fx:id="lstPessoas" VBox.vgrow="ALWAYS"
+                          onMouseClicked="#selecionarPessoa"
+                          styleClass="lista-pessoas"/>
+
+                <Button text="+ Cadastrar Nova Pessoa" onAction="#limparCampos" styleClass="button-novo-cadastro" maxWidth="Infinity"/>
+            </VBox>
+
+            <!-- COLUNA DIREITA: DETALHES E FORMULÁRIO DA PESSOA -->
+            <VBox spacing="16" styleClass="card-painel" HBox.hgrow="ALWAYS">
+                <padding>
+                    <Insets top="20" right="28" bottom="20" left="28"/>
+                </padding>
+
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <VBox spacing="2" HBox.hgrow="ALWAYS">
+                        <Label text="Dados da Pessoa" styleClass="card-titulo"/>
+                        <Label text="Visualize e edite as informações da pessoa selecionada" styleClass="card-subtitulo"/>
+                    </VBox>
+                    <HBox alignment="CENTER" spacing="12" styleClass="container-status">
+                        <Label fx:id="lblIdPessoa" text="ID: --" styleClass="badge-id"/>
+                        <Label fx:id="lblStatusCadastro" text="● Novo cadastro" styleClass="badge-status"/>
+                    </HBox>
+                </HBox>
+
+                <VBox spacing="14" VBox.vgrow="ALWAYS">
+                    <!-- Nome Completo -->
+                    <VBox spacing="5">
+                        <Label text="Nome Completo *" styleClass="rotulo-campo"/>
+                        <TextField fx:id="txtNome" promptText="Digite o nome completo..." styleClass="text-field"/>
+                    </VBox>
+
+                    <!-- Data de Nascimento e Sexo -->
+                    <HBox spacing="15">
+                        <VBox spacing="5" HBox.hgrow="ALWAYS">
+                            <Label text="Data de Nascimento" styleClass="rotulo-campo"/>
+                            <DatePicker fx:id="dtNascimento" promptText="DD/MM/AAAA" maxWidth="Infinity" styleClass="date-picker"/>
+                        </VBox>
+                        <VBox spacing="5" prefWidth="220">
+                            <Label text="Sexo" styleClass="rotulo-campo"/>
+                            <ComboBox fx:id="cmbSexo" promptText="Selecione..." maxWidth="Infinity" styleClass="combo-box"/>
+                        </VBox>
+                    </HBox>
+
+                    <!-- Seção de Foto -->
+                    <VBox spacing="6">
+                        <Label text="Foto da Pessoa" styleClass="rotulo-campo"/>
+                        <HBox spacing="15" alignment="CENTER_LEFT" styleClass="box-foto-container">
+                            <ImageView fx:id="imgFotoPreview" fitWidth="80" fitHeight="80" preserveRatio="true" styleClass="foto-preview"/>
+                            
+                            <VBox spacing="6" HBox.hgrow="ALWAYS">
+                                <HBox spacing="10">
+                                    <Button text="Selecionar Foto" onAction="#selecionarFoto" styleClass="button-acao"/>
+                                    <Button fx:id="btnRemoverFoto" text="Remover Foto" onAction="#limparCampos" styleClass="button-remover"/>
+                                </HBox>
+                                <Label text="Formatos aceitos: JPG, PNG • Tamanho máximo: 5 MB" styleClass="texto-ajuda"/>
+                            </VBox>
+                        </HBox>
+                    </VBox>
+
+                    <Label text="ℹ A foto ajuda a identificar a pessoa na árvore genealógica." styleClass="info-rodape-form"/>
+                </VBox>
+
+                <!-- BARRA INFERIOR DE BOTÕES DE AÇÃO -->
+                <HBox spacing="12" alignment="CENTER_RIGHT" styleClass="barra-acoes">
+                    <Button fx:id="btnNovo" text="Novo" onAction="#limparCampos" styleClass="button-secundario"/>
+                    <Button fx:id="btnLimpar" text="Limpar" onAction="#limparCampos" styleClass="button-secundario"/>
+                    <Button fx:id="btnExcluir" text="Excluir" onAction="#excluirPessoa" styleClass="button-perigo"/>
+                    <Button fx:id="btnSalvar" text="Salvar Pessoa" onAction="#salvarPessoa" styleClass="button-primario"/>
+                </HBox>
+            </VBox>
+
+        </HBox>
+    </center>
+
+</BorderPane>

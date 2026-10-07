@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.com.raizes.controller.ArvoreController"
+            stylesheets="@../css/Estilo.css">
+
+    <top>
+        <VBox alignment="CENTER" spacing="5">
+            <padding>
+                <Insets top="20" right="20" bottom="15" left="20"/>
+            </padding>
+
+            <Label text="RAÍZES E MEMÓRIAS"
+                   styleClass="titulo"/>
+
+            <Label text="Árvore Genealógica"
+                   styleClass="subtitulo"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+
+            <Label text="PESSOA SELECIONADA"
+                   styleClass="rotulo"/>
+
+            <ComboBox fx:id="cmbPessoaCentral" prefWidth="280"/>
+
+            <Label fx:id="lblPessoaCentral"
+                   text=""
+                   styleClass="pessoa-central"/>
+
+            <Label text="Escolha uma opção para adicionar um familiar"
+                   styleClass="instrucao"/>
+
+        </VBox>
+    </center>
+
+    <bottom>
+        <VBox spacing="12">
+
+            <padding>
+                <Insets top="15" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="DESCENDENTES"
+                   styleClass="categoria"/>
+
+            <HBox alignment="CENTER" spacing="8">
+
+                <Button fx:id="btnFilho"
+                        text="Filho"
+                        onAction="#adicionarFilho"/>
+
+                <Button fx:id="btnNeto"
+                        text="Neto"
+                        onAction="#adicionarNeto"/>
+
+                <Button fx:id="btnBisneto"
+                        text="Bisneto"
+                        onAction="#adicionarBisneto"/>
+
+            </HBox>
+
+            <Label text="ASCENDENTES"
+                   styleClass="categoria"/>
+
+            <GridPane alignment="CENTER"
+                      hgap="8"
+                      vgap="8">
+
+                <Button fx:id="btnPai"
+                        text="Pai"
+                        onAction="#adicionarPai"
+                        GridPane.columnIndex="0"
+                        GridPane.rowIndex="0"/>
+
+                <Button fx:id="btnMae"
+                        text="Mãe"
+                        onAction="#adicionarMae"
+                        GridPane.columnIndex="1"
+                        GridPane.rowIndex="0"/>
+
+                <Button fx:id="btnAvo"
+                        text="Avô"
+                        onAction="#adicionarAvo"
+                        GridPane.columnIndex="2"
+                        GridPane.rowIndex="0"/>
+
+                <Button fx:id="btnAvoa"
+                        text="Avó"
+                        onAction="#adicionarAvoa"
+                        GridPane.columnIndex="3"
+                        GridPane.rowIndex="0"/>
+
+                <Button fx:id="btnBisavo"
+                        text="Bisavô"
+                        onAction="#adicionarBisavo"
+                        GridPane.columnIndex="4"
+                        GridPane.rowIndex="0"/>
+
+                <Button fx:id="btnBisavoa"
+                        text="Bisavó"
+                        onAction="#adicionarBisavoa"
+                        GridPane.columnIndex="5"
+                        GridPane.rowIndex="0"/>
+
+            </GridPane>
+
+            <Label text="COLATERAIS"
+                   styleClass="categoria"/>
+
+            <HBox alignment="CENTER" spacing="8">
+
+                <Button fx:id="btnIrmao"
+                        text="Irmão"
+                        onAction="#adicionarIrmao"/>
+
+                <Button fx:id="btnIrma"
+                        text="Irmã"
+                        onAction="#adicionarIrma"/>
+
+                <Button fx:id="btnTio"
+                        text="Tio"
+                        onAction="#adicionarTio"/>
+
+                <Button fx:id="btnTia"
+                        text="Tia"
+                        onAction="#adicionarTia"/>
+
+                <Button fx:id="btnPrimo"
+                        text="Primo"
+                        onAction="#adicionarPrimo"/>
+
+                <Button fx:id="btnPrima"
+                        text="Prima"
+                        onAction="#adicionarPrima"/>
+
+            </HBox>
+
+            <Label text="RELACIONAMENTO"
+                   styleClass="categoria"/>
+
+            <HBox alignment="CENTER">
+
+                <Button fx:id="btnConjuge"
+                        text="Adicionar Cônjuge"
+                        onAction="#adicionarConjuge"/>
+
+            </HBox>
+
+        </VBox>
+    </bottom>
+
+</BorderPane>
